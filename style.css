@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+.next{
+    display: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-color: hsl(206, 94%, 87%)  ;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 450px;
+    background-color:#fff;
+    border-radius: 3%;
+    display: flex;
+    justify-content: space-between;
+    transition: .6s;
+}
+
+.sidebar svg{
+    width: 220px;
+    height: 425px;
+    position: absolute;
+    z-index: -1;
+    padding: 1.5% 2%  2% 0.5% ;
+    transition: .4s;
+}
+.mobilesvg{
+    display: none;
+    transition: .4s;
+}
+.steps{
+    padding: 20% 2% 2% 22%;
+}
+.steps li{
+    padding: 8% 1% 8% 1%;
+    list-style: none;
+    width: 150px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+.steps li .s{
+    font-size: 0.63rem;
+    font-weight: lighter;
+    color: hsl(229, 24%, 87%);
+    letter-spacing: -0.1px;
+    padding-bottom: 2px ;
+}
+
+.steps li button{
+    width: 27px;
+    height: 27px;
+    background-color: transparent;
+    color: white;
+    float: left;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #fff;
+    margin-right: 7.5%;
+}
+li button:hover{
+    background-color: hsl(206, 94%, 87%);
+    border-style: none;
+    color: hsl(243, 100%, 62%);
+}
+#clicked_color{
+    background-color: hsl(206,94%,87%);
+    color: hsl(243,100%,62%);
+    border-style: none;
+}
+
+/* using javascript */
+
+
+.planSelector,.finishingup,.addons,.thanks{
+    display: none;
+}
+.personalInfo,.planSelector,.addons,.finishingup,.thanks{
+    width: 420px;
+    padding: 4% 0;
+}
+.personalInfo h2,.planSelector h2,.addons h2,.finishingup h2,.thanks h2{
+    font-size: 1.7rem;
+    padding: 3% 0 1%;
+    font-weight: bold;
+    color: hsl(213, 96%, 18%);
+}
+.personalInfo h3,.planSelector h3 , .addons h3,.finishingup h3{
+    font-size: 0.9rem;
+    padding: 1% 0 3%;
+    font-weight: 200;
+    letter-spacing: -0.8px;
+    color: hsl(231, 11%, 63%);
+}
+.personalInfo h4{
+    font-size: 0.78rem;
+    padding: 3.5% 0 1.5%;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    color: hsl(213, 96%, 18%);
+}
+
+.personalInfo input{
+    width: 300px;
+    height: 30px;
+    padding: 1% 5% 1%;
+    border-top-right-radius: 2% 20%;
+    border-bottom-left-radius: 2% 20%;
+    border-top-left-radius: 2% 20%;
+    border-bottom-right-radius:2% 20% ;
+    border-width: 1px;
+    border-color:hsl(217, 100%, 90%);
+}
+
+.error1,.error2,.error3{
+    display: none;
+    float: right;
+    margin-right: 80px;
+    color: hsl(354, 84%, 57%);
+    font-weight: 600;
+}
+
+
+::placeholder{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: hsl(231, 11%, 63%);
+}
+
+.nextstep{
+    position: absolute;
+    color: hsl(229, 24%, 87%);
+    background-color  : hsl(213, 96%, 18%);
+    bottom: 5%;
+    right: 11%;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 10% 20%;
+    border-bottom-left-radius: 10% 20%;
+    border-top-left-radius: 10% 20%;
+    border-bottom-right-radius:10% 20% ;
+    transition: .4s;
+}
+.nextstep,.n1{
+    right: 7.5%;
+}
+.nextstep:hover{
+    background-color  : hsl(243, 100%, 62%);
+    font-weight: 600;
+}
+
+
+.container .goback{
+    position: absolute;
+    color: hsl(231, 11%, 63%);
+    background-color  : white;
+    border: none;
+    bottom: 5%;
+    left: 37%;
+    width: 100px;
+    height: 40px;
+}
+.goback:hover{
+    color  : hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+.controls{
+    display: none;
+}
+.plans{
+    display: flex;
+    gap: 15px;
+    padding-bottom: 7%;
+}
+
+
+.plans button{
+    width: 27%;
+    height: 140px;
+    
+    background-color: white;
+    text-align: left;
+    padding: 3%;
+
+    border-width: 1px;
+    border-top-right-radius: 5% 7%;
+    border-bottom-left-radius: 5% 7%;
+    border-top-left-radius: 5% 7%;
+    border-bottom-right-radius:5% 7% ;
+
+    transition: .4s;
+}
+
+.plans button:hover{
+    background-color: hsl(231, 100%, 98%)  ;
+}
+.plans svg{
+    width: 35px;
+    padding: 0 0 35%;
+}
+
+.planSelector h4{
+    display: none;
+    font-size: 0.7rem;
+    padding:1%;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    color: hsl(213, 96%, 18%);
+}
+.plans .plan1 {
+    background-color: hsl(231, 100%, 98%) ;
+}
+
+.monthly-yearly{
+    width: 360px;
+    height: 5%;
+
+    padding: 3% 1% 3%;
+    text-align: center;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: hsl(231, 11%, 63%);
+
+    background-color: hsl(231, 100%, 98.8%) ;
+
+    border-width: 1px;
+    border-top-right-radius: 5% 7%;
+    border-bottom-left-radius: 5% 7%;
+    border-top-left-radius: 5% 7%;
+    border-bottom-right-radius:5% 7% ;
+}
+.monthly-yearly .month{
+    color: hsl(213, 96%, 18%);
+    transition: .4s;
+}
+
+/* stylish button  */
+
+
+
+
+/* changing size of plans */
+.switch input:checked ~ .plans .plan1 {
+    height: 140px;
+  }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    margin: 0 5%;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 11px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  
+  .switch input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+
+  
+
+
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+.checkbox{
+    width: 88%;
+    height: 60px;
+    margin: 3% 0;
+    border-style:inset  ;
+    border-width: 1px;
+    border-top-right-radius: 4% 15%;
+    border-bottom-left-radius: 4% 15%;
+    border-top-left-radius: 4% 15%;
+    border-bottom-right-radius:4% 15% ;
+    transition: .4s;
+}
+.checkbox:hover{
+    background-color: hsl(231, 100%, 98%);
+}
+
+.checkbox input{
+    float: left;
+    margin: 6%;
+    width: 15px;
+    height: 15px;
+    accent-color:  hsl(243, 100%, 62%);
+}
+
+
+
+.checkbox h4,.subs h4{
+    font-size: 0.86rem;
+    padding: 3% 2% 0;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+}
+.checkbox h4 span{
+    color:hsl(243, 100%, 62%);
+    font-size: 0.8rem;
+    float: right;
+    margin: 10px 15px 0 0;
+}
+.subs span{
+    float: right;
+}
+.subs h4{
+    padding: 4% 6% 0;
+}
+.subs h3{
+    display: none;
+    padding: 2%  6% ;
+}
+.subs hr{
+    margin: 4% 2%;
+}
+.total{
+    font-size: 0.76rem;
+    margin: 5% 4%;
+}
+.total span{
+    color: hsl(243, 100%, 62%);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 35% ;
+}
+
+.subs{
+    margin: 3%  0;
+    width: 90%;
+    background-color: hsl(231, 100%, 98.8%);
+    border-top-right-radius: 2% 10%;
+    border-bottom-left-radius: 2% 10%;
+    border-top-left-radius: 2% 10%;;
+    border-bottom-right-radius:2% 10%; ;
+    transition: .4s;
+}
+.subs a{
+    font-size: 0.74rem;
+    color: hsl(231, 11%, 63%);
+    padding: 3% 6%;
+}
+
+.thanks{
+    text-align: center;
+    padding: 17% 6%;
+    transition: .4s;
+}
+.thanks svg{
+    width: 65px;
+}
+.thanks p{
+    font-size: 0.8rem;
+    color: hsl(231, 11%, 63%);
+    padding: 6% 6%;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 699px) {
+ 
+    .sidebar svg{
+       display: none;
+    }
+   
+    .sidebar .steps{
+        display: none;
+    }
+    .mobilesvg{
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .mobilesvg ul{
+        display: flex;
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .mobilesvg ul li{
+        padding: 15px;
+        list-style: none;
+        width: 15px;
+        color: #fff;
+    }
+    .mobilesvg li button{
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        color: white;
+        border-radius: 50%;
+        border-width: 1px;
+        border-color: #fff;
+    }
+    .mobilesvg li button:hover{
+        background-color: hsl(206, 94%, 87%);
+        border-style: none;
+        color: hsl(243, 100%, 62%);
+    }
+    .container{
+        width: 300px;
+        height: 400px;
+    }
+    .controls{
+        display: inline;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        background-color:hsl(231, 100%, 98.8%) ;
+
+    }
+    .container .nextstep,.container .goback{
+        display: none;
+    }
+    .controls .goback{
+        display: none;
+        position: relative;
+        color: hsl(231, 11%, 63%);
+        background-color  : hsl(231, 100%, 98.8%) ;
+        border: none;
+        top: 5%;
+        left: 5%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .personalInfo h2,.planSelector h2,.addons h2,.finishingup h2,.thanks h2{
+        font-size: 1.4rem;
+        padding: 3% 5% 1%;
+        font-weight: bold;
+        color: hsl(213, 96%, 18%);
+    }
+    .personalInfo h3,.planSelector h3 , .addons h3,.finishingup h3{
+        font-size: 0.85rem;
+        padding: 1% 5% 3%;
+        font-weight: 200;
+        letter-spacing: -0.8px;
+        color: hsl(231, 11%, 63%);
+    }
+    .personalInfo h4, .addons h4,.finishingup h4{
+        padding: 4% 5% 1%;
+    }
+    .planSelector h4{
+        padding: 0;
+    }
+    .personalInfo input{
+        width: 200px;
+        height: 30px;
+        margin-left: 5%;
+        padding: 1% 5% 1%;
+    }
+    .error1,.error2,.error3{
+        margin-right: 40px;
+    }
+
+    .planSelector{
+        width: 300px;
+    }
+    .plans{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 3% 0 0 0;
+    }
+    
+    .plans button{
+        width: 88%;
+        height: 70px;
+        background-color: white;
+        text-align: left;
+        padding: 0;
+        border-width: 1px;
+        border-top-right-radius: 4% 15%;
+        border-bottom-left-radius: 4% 15%;
+        border-top-left-radius: 4% 15%;
+        border-bottom-right-radius:4% 15% ;
+    }
+    .switch input:checked + .plans button{
+        height: 70px;
+      }
+    .plans svg{
+        float: left;
+        padding: 4%;
+    }
+    .monthly-yearly{
+        width: 88%;
+        height: 5%;
+        
+        margin-left: 6%;
+        padding: 3% 1% 3%;
+        text-align: center;
+    
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: hsl(231, 11%, 63%);
+    
+        background-color: hsl(231, 100%, 98.8%) ;
+    
+        border-width: 1px;
+        border-top-right-radius: 4% 15%;
+        border-bottom-left-radius: 4% 15%;
+        border-top-left-radius: 4% 15%;
+        border-bottom-right-radius:4% 15% ;
+    }
+
+    .checkbox{
+        margin: 4% 4% 1%;
+    }
+
+    .checkbox h4 span{
+        margin-right: 0;
+    }
+    
+    .subs{
+        margin: 3%  3%;
+    }
+    .total{
+        display: flex;
+        justify-content: space-between;
+        padding:3%;
+        margin: 8% 3%;
+    }
+    .total span{
+        margin-left: 0;
+        margin-right: 3%;
+    }
+
+}
+@media only screen and (max-width: 320px) {
+    .container{
+        margin-left: 25px;
+    }
+}
+
+
+
+.attribution{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
